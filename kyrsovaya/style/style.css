@@ -1899,3 +1899,48 @@ tr:hover {
         padding-top: 20px;
     }
 }
+
+/* ========== ОЧЕНЬ ПЛАВНЫЙ СКРОЛЛ (ПК + ТЕЛЕФОН) ========== */
+
+/* Основной плавный скролл для всей страницы */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Для очень плавного скролла на телефонах (iOS-подобное поведение) */
+@media (max-width: 768px) {
+    html {
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    body {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* Кастомный красивый скроллбар (работает в Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cc0000;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #990000;
+}
+
+/* Отступ при скролле к якорям (чтобы шапка не перекрывала) */
+* {
+    scroll-margin-top: 80px;
+}
