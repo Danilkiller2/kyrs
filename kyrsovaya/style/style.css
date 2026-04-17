@@ -1944,3 +1944,14 @@ html {
 * {
     scroll-margin-top: 80px;
 }
+
+/* Стили для больших иконок соцсетей на страницах */
+.social-page-icon svg {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+
+.social-page-icon svg:hover {
+    transform: scale(1.05);
+}
